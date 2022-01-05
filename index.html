@@ -5,38 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="Script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+
     <header>
 <h1>LET'S PLAY THE WAR GAME</h1>
+<p>Click on Shuffle to see who is getting the big number!</p>
 </header>
+<div id="bothBoxes">
 
-<section class="Player1">
-  <h2>Player 1</h2>
-  <div class="leftPlayer">
-<div data-points="0">First Player Points:</div>
+<div class="player1">
+  <div data-points="0">Player1 Points:</div>
+  <div class="points1">0</div>
+<div class="box1">
+  <div>
+    Player1
+  </div>
+  
+</div>
 </div>
 
-<div class="card rigth">
-  <span class="plyr1"></span>
-</div>
-</section>
-
-<section class="Player2">
-
-<h2>Player 2</h2>
-<div class="rightPlayer">
-
-<div data-points="0">Second Player Points:</div>
-<div class="card left">
-  <span class="plyr2"></span>
+<div class="player2">
+  <div data-points="0">Player2 Points:</div>
+  <div class="points2">0</div>
+<div class="box2">Player2</div>
 </div>
 
-</section>
+</div>
+<div id="button">
+  <button id="shuffle-button" type="button">Shuffle!</button>
+</div>
 
-<button type="button">Shuffle!</button>
+<div class="gameMsg"><h1 id="msgContent"class="heading-display"></h1></div>
   </body>
 </html>
 
