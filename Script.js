@@ -74,3 +74,4 @@ function playTurn() {
 const shuffleButton = document.querySelector("#shuffle-button")
 
 shuffleButton.addEventListener("click", playTurn);
+

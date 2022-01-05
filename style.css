@@ -1,28 +1,46 @@
 .box1, .box2 {
     height: 200px;
     width: 200px;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 100px;
+    margin-top: 4px;
     padding: 5px;
     border: 2px solid rgb(86, 86, 209);
+    padding: 10px;
+    margin: 10px;
+}
+.box2 {
+    margin-top: 30px;
 }
 
 #button {
-margin: 20px;
-}
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f0e68c;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-top: 10px;
+    margin-left: 68px;
+  }
+  
+  #button:hover {background-color: #e46363}
+  
+  #button:active {
+    background-color: #d7eed8;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
-.box1 {
-    margin: 10px;
-    padding: 30px;
-}
 .shuffle {
     font-size: 40px;
 }
 
-.box2 {
-    margin: 10px;
-    padding: 30px;
-}
 body {
     background-image: url('https://i.pinimg.com/originals/c3/1e/43/c31e4363c08e3556d2a701b09f0c4b1d.jpg');
     background-repeat: no-repeat;
@@ -34,4 +52,27 @@ h1 {
 }
 p {
 text-align: center;
+}
+h1 {
+    background-color: #f0e68c;
+}
+P {
+    color: #ff2205;
+}
+.dataPointsText1, .dataPointsText2 {
+    color: rgb(252, 65, 65);
+    margin: 15px 10px 10px 80px;
+}
+
+.points1, .points2 {
+    color: red;
+    padding: 4px;
+    margin: 15px 10px 10px 110px;
+    font-size: 30px;
+}
+#bothBoxes {
+    margin-left: 100px;
+}
+.player1Number, .player2Number {
+    padding: 75px;
 }
