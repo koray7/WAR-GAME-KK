@@ -7,16 +7,17 @@ let deck = [];
 
 function createDeck() {
 
-    const ranks = ["ACE", "2", "3", "4", "5", "6", "7", "8", "9", "10", "JACK", "QUEEN", "KING"];
-    const suits = ["♥️", "♣️", "♦️", "♠️"]
-    
+    const ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "0", "J", "Q", "K", "A"];
+    const suits = ["H", "C", "D", "S"]
 
     for (let i=0; i<4; i++) {
         for (let x=0; x<13; x++) {
     
             deck.push({rank: ranks[x], 
             suits: suits[i], 
-        value: x+1});
+        value: x+1, 
+        img: `https://deckofcardsapi.com/static/img/${ranks[x]}${suits[i]}.png`
+    });
         }
     }
     return deck;
@@ -50,15 +51,15 @@ function splitDecks(){
 //worked on this together
 
 function playTurn() {
-    box1.innerHTML = `<div class="shuffle">${player1[0].rank} ${player1[0].suits}</div>`
-    box2.innerHTML = `<div class="shuffle">${player2[0].rank} ${player2[0].suits}<div>`
+    box1.innerHTML = `<img src="${player1[0].img}" class="cardsImg">`
+    box2.innerHTML = `<img src="${player2[0].img}" class="cardsImg">`
 
     if(player1[0].value>player2[0].value) {
         document.querySelector('.points1').innerHTML = parseInt(document.querySelector('.points1').innerHTML)+1;
     } else {
         document.querySelector('.points2').innerHTML = parseInt(document.querySelector('.points2').innerHTML)+1;
     }
-    
+    if(player1[0].value)
     
     player1.shift();
     player2.shift();
