@@ -51,28 +51,45 @@ function splitDecks(){
 //worked on this together
 
 function playTurn() {
+    scoresCheck();
     box1.innerHTML = `<img src="${player1[0].img}" class="cardsImg">`
     box2.innerHTML = `<img src="${player2[0].img}" class="cardsImg">`
 
     if(player1[0].value>player2[0].value) {
         document.querySelector('.points1').innerHTML = parseInt(document.querySelector('.points1').innerHTML)+1;
+        
     } else {
         document.querySelector('.points2').innerHTML = parseInt(document.querySelector('.points2').innerHTML)+1;
     }
     if(player1[0].value)
+
     
     player1.shift();
     player2.shift();
 
-    //Everytime someone clicks on the button, pick 1 card from the newDeck and added to player1
-    //pick another card from the Deck
+
 }
-// get button interaction
-// variable for the DOM referance
-// query selection
-//listen for user for the button
-
 const shuffleButton = document.querySelector("#shuffle-button")
-
 shuffleButton.addEventListener("click", playTurn);
 
+
+function startOver() {
+   location.reload();
+}
+const scoreChange = document.querySelector("#whoWin");
+const resetButton = document.querySelector("#reset-button")
+resetButton.addEventListener("click", startOver)
+
+function scoresCheck(whoWin) {
+
+    if(player1.length<1 || player2.length<1) {
+        scoreChange.innerText = "Game Over";
+    }
+    else if (player1[0].value>player2[0].value) {
+      scoreChange.innerText = "Player1 Win!";
+    } else if (player1[0].value<player2[0].value) {
+        scoreChange.innerText = "Player2 Win!";
+    } else {
+        scoreChange.innerText = "It's Draw!";
+    }
+}

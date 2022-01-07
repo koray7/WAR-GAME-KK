@@ -1,7 +1,7 @@
 .box1, .box2 {
     height: 200px;
     width: 200px;
-    margin-left: 100px;
+    margin-left: 200px;
     margin-top: 4px;
     padding: 5px;
     padding: 10px;
@@ -13,31 +13,28 @@
 
 #button {
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 10px 15px;
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #f0e68c;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+    background-color: #f3ecac;
+    border-radius: 18px;
+    box-shadow: 0 7px rgb(124, 109, 109);
     margin-top: 10px;
-    margin-left: 68px;
+    margin-left: 0px;
+    font-size: 1px;
   }
   
-  #button:hover {background-color: #e46363}
+  #button:hover {background-color: #fc0e0e}
   
   #button:active {
     background-color: #d7eed8;
-    box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
 
 .shuffle {
-    font-size: 40px;
+    font-size: 20px;
 }
 
 body {
@@ -86,4 +83,66 @@ P {
 .cardsImg {
     height: 210px;
     width: 210px;
+}
+
+#button2 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f3ecac;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 7px rgb(124, 109, 109);
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#button2:hover {background-color: #fc0e0e}
+  
+#button2:active {
+  background-color: #d7eed8;
+  transform: translateY(4px);
+}
+#whoWin {
+    /* padding-left: 300px; */
+    display: inline-block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+} 
+ #reset-button {
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+    background-color: rgb(243, 83, 83);
+    color: white;
+    border-color: white;
+} 
+ 
+#shuffle-button {
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+    background-color: rgb(73, 73, 71);
+    color: white;
+    border-color: white;
+}
+.scoreboard {
+margin-left: 400px;
 }

@@ -11,7 +11,7 @@
   <body>
 
     <header>
-<h1>LET'S PLAY THE WAR GAME!</h1>
+<h1>THE WAR GAME!</h1>
 <p>Click on Shuffle to see who is getting the big number!</p>
 </header>
 <div id="bothBoxes">
@@ -23,7 +23,9 @@
   <div class="player1Number"></div>
 </div>
 </div>
-
+<div class="scoreboard">
+  <h1 id="whoWin">Let's get started!</h1>
+</div>
 <div class="player2">
     <div data-points="0" class="dataPointsText2">Player2 Points:</div>
   <div class="points2">0</div>
@@ -33,10 +35,13 @@
 </div>
 
 <div id="button">
-    <button id="shuffle-button" type="button">Shuffle!</button>
+  <button id="shuffle-button" type="button">SHUFFLE!</button></div>
+
+  <div id="button2">
+    <button id="reset-button">RESET!</button>
+  </div>
 </div>
 
-<div class="gameMsg"><h1 id="msgContent"class="heading-display"></h1></div>
   </body>
 </html>
 
