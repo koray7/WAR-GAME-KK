@@ -26,7 +26,6 @@ function shuffleDeck(deck) {
     for(let c=0; c<deck.length; c++) {
         const tempCard = deck[c];
         const randomIndex = Math.floor(Math.random() * 52);
-        //deck[c] = deck[randomIndex];
         let x = deck[c];
         deck[c] = deck[randomIndex];
         deck[randomIndex] = x
@@ -48,27 +47,25 @@ function splitDecks(){
     console.log(player1);
     console.log(player2);
 
-//worked on this together
-
-function playTurn() {
-    scoresCheck();
-    box1.innerHTML = `<img src="${player1[0].img}" class="cardsImg">`
-    box2.innerHTML = `<img src="${player2[0].img}" class="cardsImg">`
-
-    if(player1[0].value>player2[0].value) {
-        document.querySelector('.points1').innerHTML = parseInt(document.querySelector('.points1').innerHTML)+1;
-        
-    } else {
-        document.querySelector('.points2').innerHTML = parseInt(document.querySelector('.points2').innerHTML)+1;
-    }
-    if(player1[0].value)
-
+    function playTurn() {
+        scoresCheck();
+        box1.innerHTML = `<img src="${player1[0].img}" class="cardsImg">`
+        box2.innerHTML = `<img src="${player2[0].img}" class="cardsImg">`
     
-    player1.shift();
-    player2.shift();
-
-
-}
+        if(player1[0].value>player2[0].value) {
+            document.querySelector('.points1').innerHTML = parseInt(document.querySelector('.points1').innerHTML)+1;
+            
+        } else {
+            document.querySelector('.points2').innerHTML = parseInt(document.querySelector('.points2').innerHTML)+1;
+        }
+        if(player1[0].value)
+    
+        
+        player1.shift();
+        player2.shift();
+    
+    
+    }
 const shuffleButton = document.querySelector("#shuffle-button")
 shuffleButton.addEventListener("click", playTurn);
 
@@ -83,9 +80,11 @@ resetButton.addEventListener("click", startOver)
 function scoresCheck(whoWin) {
 
     if(player1.length<1 || player2.length<1) {
-        scoreChange.innerText = "Game Over";
-    }
-    else if (player1[0].value>player2[0].value) {
+        gameOver();
+        playerFinalScore();
+        }
+
+    if (player1[0].value>player2[0].value) {
       scoreChange.innerText = "Player1 Win!";
     } else if (player1[0].value<player2[0].value) {
         scoreChange.innerText = "Player2 Win!";
@@ -93,3 +92,25 @@ function scoresCheck(whoWin) {
         scoreChange.innerText = "It's Draw!";
     }
 }
+
+function gameOver() {
+    const myTimeout = setTimeout(function() {
+        scoreChange.innerText = "Game Over!";
+    }, 3000);
+}
+function playerFinalScore() {
+    const playerWinMsg = setTimeout(function() {
+        if (document.querySelector('.points1').innerHTML>document.querySelector('.points2').innerHTML) {
+            scoreChange.innerText = "Player1 has more score!";
+          } else if (document.querySelector('.points1').innerHTML<document.querySelector('.points2').innerHTML) {
+              scoreChange.innerText = "Player2 has more score!";
+          } else {
+              scoreChange.innerText = "It's Draw!";
+          }
+    }, 5000);
+}
+//check to see who won! if else statements
+// if player1 has the most point end of the game, message "player1 wins"!
+//settimeout starts then it scoreboard message changes to an another message.
+//if player2 wins has the most, message player2 wins!
+// disable the shuffle button after the game  
