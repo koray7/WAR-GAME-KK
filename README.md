@@ -23,3 +23,5 @@ GAME PLAN
 -Select the "Reset" button and make the whole game restart it again.
 
 [Let's start playing!](https://koray7.github.io/WAR-GAME-KK/)
+
+![](WAR GAME.png)
