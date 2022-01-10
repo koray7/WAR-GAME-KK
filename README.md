@@ -24,4 +24,4 @@ GAME PLAN
 
 [Let's start playing!](https://koray7.github.io/WAR-GAME-KK/)
 
-![](WAR GAME.png)
+![WaGame](./WAR_GAME.png)
