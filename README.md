@@ -21,3 +21,5 @@ GAME PLAN
 -Make a commend that would put that each card seperately and pick the new cards from the deck.
 -After 26th round, create a message that shows the game that is over.
 -Select the "Reset" button and make the whole game restart it again.
+
+[Let's start playing!](https://koray7.github.io/WAR-GAME-KK/)

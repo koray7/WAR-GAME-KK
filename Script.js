@@ -73,9 +73,10 @@ shuffleButton.addEventListener("click", playTurn);
 function startOver() {
    location.reload();
 }
-const scoreChange = document.querySelector("#whoWin");
+const scoreChange = document.querySelector("#whoWin")
 const resetButton = document.querySelector("#reset-button")
 resetButton.addEventListener("click", startOver)
+
 
 function scoresCheck(whoWin) {
 
@@ -96,8 +97,11 @@ function scoresCheck(whoWin) {
 function gameOver() {
     const myTimeout = setTimeout(function() {
         scoreChange.innerText = "Game Over!";
-    }, 3000);
+    }, 1000);
 }
+
+const gameOverMsg = document.querySelector(".full-screen")
+
 function playerFinalScore() {
     const playerWinMsg = setTimeout(function() {
         if (document.querySelector('.points1').innerHTML>document.querySelector('.points2').innerHTML) {
