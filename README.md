@@ -22,6 +22,6 @@ GAME PLAN
 -After 26th round, create a message that shows the game that is over.
 -Select the "Reset" button and make the whole game restart it again.
 
-[Let's start playing!](https://koray7.github.io/WAR-GAME-KK/)
+[Let's start playing!](https://sad-ptolemy-d0c1c8.netlify.app)
 
 ![WaGame](./WAR_GAME.png)
